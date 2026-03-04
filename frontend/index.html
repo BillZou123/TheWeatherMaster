@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="main-layout">
+
+    <!-- LEFT SIDE -->
+    <div class="container">
+
+        <h1>Weather App</h1>
+
+        <label>City / ZIP / GPS</label>
+        <input id="location" placeholder="Toronto or 43.65,-79.38">
+
+        <button onclick="getWeather()">Get Weather</button>
+
+        <div id="weatherResult"></div>
+        <div id="mapContainer"></div>
+
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+    <div class="container">
+
+        <h1 id="locationTitle">Your Location</h1>
+
+        <button onclick="getCurrentLocationWeather()">
+            Use My Location
+        </button>
+
+        <div id="currentLocationWeather"></div>
+
+    </div>
+
+</div>
+
+<div id="errorPopup" class="error-popup"></div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
