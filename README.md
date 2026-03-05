@@ -30,7 +30,7 @@ Deployed application:
 
 https://theweathermaster2.onrender.com/
 
-Note: 
+Note: This application uses the **OpenWeather API**, which is a free public weather API. Since the app is deployed on Render, all API requests originate from a shared Render server IP. Free API tiers may enforce request limits per IP, so if the limit is reached by other users on the same server, the weather request may temporarily fail. If this happens, please try again later.
 
 # Features
 
