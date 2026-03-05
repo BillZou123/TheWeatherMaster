@@ -107,8 +107,6 @@ pip3 install -r requirements.txt
 
 ## 3. Start Flask server
 
-cd backend
-
 OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES \
 gunicorn backend.app:app --bind 0.0.0.0:10000
 
