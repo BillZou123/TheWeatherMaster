@@ -107,6 +107,7 @@ cd backend
 
 python3 app.py
 
+---
 
 # API Endpoints
 The backend exposes several REST API endpoints that handle weather data retrieval and geolocation services.
