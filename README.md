@@ -1,5 +1,5 @@
 # TheWeatherMaster
-# PM Accelerator Technical Project
+
 
 ## Author
 Yuangan Zou  
