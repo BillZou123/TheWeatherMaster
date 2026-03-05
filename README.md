@@ -99,13 +99,16 @@ cd weather-app
 
 ## 2. Install dependencies
 
+python3 -m venv myenv
+
+source myenv/bin/activate
+
 pip3 install -r requirements.txt
 
 ## 3. Start Flask server
 
-cd backend
-
-python3 app.py
+OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES \
+gunicorn backend.app:app --bind 0.0.0.0:10000
 
 ---
 
