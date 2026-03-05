@@ -108,6 +108,39 @@ cd backend
 python3 app.py
 
 
+# API Endpoints
+The backend exposes several REST API endpoints that handle weather data retrieval and geolocation services.
+All endpoints return responses in JSON format.
+
+⸻
+
+## 1. Get Current Weather
+
+Retrieve the current weather information for a specific location.
+
+ **Endpoint**
+ GET /weather/current
+
+ **Query Parameters**
+Location(string)
+
+**Example Request**
+GET /weather/current?location=North%20York
+
+**Example Response**
+{
+  "temperature": 5.1,
+  "wind_speed": 25.2,
+  "wind_direction": 76,
+  "is_day": true,
+  "weather_code": 3
+}
+
+
+
+
+
+
 
 
 # About PM Accelerator
