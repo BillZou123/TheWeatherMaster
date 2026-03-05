@@ -1,7 +1,14 @@
 import requests
 import os
 
-OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY")
+def get_api_key():
+    key = os.getenv("OPENWEATHER_API_KEY")
+    if not key:
+        raise Exception("OPENWEATHER_API_KEY not set in environment variables")
+    return key
+
+OPENWEATHER_API_KEY = get_api_key()
+
 
 def parse_gps_coordinates(location_str):
     """
@@ -39,6 +46,9 @@ def geocode_location(location_query):
     """
 
     url = "http://api.openweathermap.org/geo/1.0/direct"
+
+    if not OPENWEATHER_API_KEY:
+        raise Exception("OPENWEATHER_API_KEY not set in environment variables")
 
     params = {
         "q": location_query,

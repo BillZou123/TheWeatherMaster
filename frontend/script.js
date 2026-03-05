@@ -37,7 +37,7 @@ async function getWeather(){
         const response = await fetch(url)
         const data = await response.json()
 
-        // 如果后端返回 error
+        // backend error
         if(data.status === "error"){
             showError(data.message)
             return
