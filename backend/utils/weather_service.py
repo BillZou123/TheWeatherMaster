@@ -2,6 +2,9 @@
 import requests
 
 
+
+
+
 def getWeatherFromCoordinates(lat, lon):
 
     url = "https://api.open-meteo.com/v1/forecast"
@@ -18,7 +21,7 @@ def getWeatherFromCoordinates(lat, lon):
     if response.status_code != 200:
         print("Status code:", response.status_code)
         print("Response text:", response.text)
-        raise Exception("Weather API request failed")
+        raise Exception(f"Weather API request failed due to {response.text}")
 
     data = response.json()
     #print(data)
