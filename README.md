@@ -23,6 +23,15 @@ The system integrates **external APIs**, **geolocation services**, and **interac
 
 ---
 
+
+# Live Demo
+
+Deployed application:
+
+https://theweathermaster2.onrender.com/
+
+Note: 
+
 # Features
 
 ### Weather Search
@@ -82,20 +91,42 @@ Deployment
 
 ## 1. Clone the repository
 
-```bash
 git clone https://github.com/YOUR_USERNAME/weather-app.git
 cd weather-app
 
 
 
 ## 2. Install dependencies
-```bash
+
 pip3 install -r requirements.txt
 
 ## 3. Start Flask server
-```bash
+
 cd backend
 python3 app.py
+
+
+
+
+# About PM Accelerator
+
+The **Product Manager Accelerator (PM Accelerator)** is a professional development program designed to help aspiring product managers build real-world product and technical skills.
+
+The program focuses on helping participants:
+
+- Understand product development processes
+- Build working applications
+- Learn how software products are designed and delivered
+- Demonstrate technical and problem-solving abilities
+
+Participants complete hands-on technical projects that showcase their ability to build and deploy functional software systems.
+
+More information about the PM Accelerator program can be found on their LinkedIn page.
+
+---
+
+
+
 
 
 
