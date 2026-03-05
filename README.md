@@ -109,7 +109,8 @@ pip3 install -r requirements.txt
 
 cd backend
 
-python3 app.py
+OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES \
+gunicorn backend.app:app --bind 0.0.0.0:10000
 
 ---
 
