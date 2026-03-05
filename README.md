@@ -92,6 +92,7 @@ Deployment
 ## 1. Clone the repository
 
 git clone https://github.com/YOUR_USERNAME/weather-app.git
+
 cd weather-app
 
 
@@ -103,6 +104,7 @@ pip3 install -r requirements.txt
 ## 3. Start Flask server
 
 cd backend
+
 python3 app.py
 
 
