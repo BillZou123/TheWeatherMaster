@@ -1,11 +1,11 @@
 from flask import Blueprint, request, Response
-from models import db, WeatherRequest
-from utils.geocode import geocode_location, parse_gps_coordinates, geocode_zip
-from utils.weather_service import getWeatherFromCoordinates
-from utils.validate_dates import validate_dates
-from utils.location_parser import detect_location_type
-from utils.responses import success_response, error_response
-from utils.weather_service import getWeatherRange
+from backend.models import db, WeatherRequest
+from backend.utils.geocode import geocode_location, parse_gps_coordinates, geocode_zip
+from backend.utils.weather_service import getWeatherFromCoordinates
+from backend.utils.validate_dates import validate_dates
+from backend.utils.location_parser import detect_location_type
+from backend.utils.responses import success_response, error_response
+from backend.utils.weather_service import getWeatherRange
 import json
 
 weather_bp = Blueprint("weather_bp", __name__)
@@ -40,7 +40,7 @@ def get_current_weather():
             lat, lon = geocode_location(location)
 
         weather = getWeatherFromCoordinates(lat, lon)
-        #print(weather)
+
 
         result = {
             "location": location,
@@ -56,6 +56,7 @@ def get_current_weather():
         return success_response(result)
 
     except Exception as e:
+        print(e)
         return error_response(str(e), 500)
 
 # -------------------------

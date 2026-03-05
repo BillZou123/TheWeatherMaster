@@ -1,7 +1,7 @@
 from flask import Flask, send_from_directory
-from routes.weather_routes import weather_bp
-from models import db
-from config import FRONTEND_DIR
+from backend.routes.weather_routes import weather_bp
+from backend.models import db
+from backend.config import FRONTEND_DIR
 
 app = Flask(__name__, static_folder=str(FRONTEND_DIR), static_url_path="")
 

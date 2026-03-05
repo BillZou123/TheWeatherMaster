@@ -1,4 +1,4 @@
-const API_BASE = "http://127.0.0.1:5000"
+
 
 
 function getWeatherIcon(code, isDay){
@@ -33,7 +33,7 @@ async function getWeather(){
 
     try{
 
-        const url = `${API_BASE}/weather/current?location=${location}`
+        const url = `/weather/current?location=${location}`
         const response = await fetch(url)
         const data = await response.json()
 
