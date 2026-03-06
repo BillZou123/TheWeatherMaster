@@ -19,9 +19,12 @@ def getWeatherFromCoordinates(lat, lon):
     response = requests.get(url, params=params)
 
     if response.status_code != 200:
-        print("Status code:", response.status_code)
-        print("Response text:", response.text)
-        raise Exception(f"Status code: {response.status_code}, Response: {response.text}")
+        if response.status_code == 429:
+            raise Exception("Rate limit exceeded for Weather API at Open-Meteo. Please try again later.")
+        else:
+            print("Status code:", response.status_code)
+            print("Response text:", response.text)
+            raise Exception(f"Failed to get Weather data: {response.text}")
 
     data = response.json()
     #print(data)
