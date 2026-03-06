@@ -21,7 +21,7 @@ def getWeatherFromCoordinates(lat, lon):
     if response.status_code != 200:
         print("Status code:", response.status_code)
         print("Response text:", response.text)
-        raise Exception(f"Weather API request failed due to {response.text}")
+        raise Exception(f"Status code: {response.status_code}, Response: {response.text}")
 
     data = response.json()
     #print(data)
